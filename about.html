@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Gaurav Kaushik</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark')
+    }
+  </script>
+</head>
+<body class="bg-gradient-to-b from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-white transition-colors duration-300">
+
+  <nav class="flex items-center justify-between px-8 py-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700">
+    <h1 class="text-2xl font-semibold tracking-wide">Gaurav<span class="text-indigo-500">.</span></h1>
+    <ul class="flex gap-6 text-slate-600 dark:text-slate-300">
+      <li><a href="index.html" class="hover:text-indigo-500 transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-indigo-500 transition">About</a></li>
+      <li><a href="index.html#projects" class="hover:text-indigo-500 transition">Projects</a></li>
+      <li><a href="index.html#contact" class="hover:text-indigo-500 transition">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-center gap-10 px-8 py-16 text-center md:text-left">
+    <img src="./image/WhatsApp Image 2025-11-02 at 12.26.08 PM.jpeg" alt="Gaurav Kaushik" class="w-64 h-64 rounded-full object-cover shadow-lg hover:scale-105 transition">
+    <div class="max-w-lg">
+      <h2 class="text-4xl font-bold mb-4">Hey, I’m <span class="text-indigo-500">Gaurav Kaushik</span></h2>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+        I’m a front-end developer and creative designer who loves combining technology and storytelling.  
+        My background in media and photography helps me bring a cinematic, human touch to every UI I build.  
+        I’m currently exploring React, Tailwind, and modern web animations to make interfaces feel alive.
+      </p>
+      <a href="mailto:gauravskworkk@gmail.com" class="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-xl text-white shadow-md transition transform hover:scale-105">
+        Contact Me
+      </a>
+    </div>
+  </section>
+
+  <footer class="text-center py-6 border-t border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 text-sm">
+    © 2025 Gaurav Kaushik — Built with ❤️ in Tailwind CSS
+  </footer>
+</body>
+</html>

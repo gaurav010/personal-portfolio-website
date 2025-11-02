@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaurav Kaushik | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Tailwind Dark Mode Toggle
+    tailwind.config = {
+      darkMode: 'class'
+    }
+
+    // Theme Toggle Persistence
+    const toggleTheme = () => {
+      const html = document.documentElement
+      html.classList.toggle('dark')
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light')
+    }
+
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.classList.add('dark')
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-100 to-white dark:from-slate-900 dark:to-slate-800 text-slate-800 dark:text-white font-inter transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-8 py-4 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md sticky top-0 z-50 border-b border-slate-200 dark:border-slate-700">
+    <h1 class="text-2xl font-semibold tracking-wide">Gaurav<span class="text-indigo-500">.</span></h1>
+    <ul class="flex gap-6 text-slate-600 dark:text-slate-300">
+      <li><a href="index.html" class="hover:text-indigo-500 transition">Home</a></li>
+      <li><a href="about.html" class="hover:text-indigo-500 transition">About</a></li>
+      <li><a href="#projects" class="hover:text-indigo-500 transition">Projects</a></li>
+      <li><a href="#contact" class="hover:text-indigo-500 transition">Contact</a></li>
+    </ul>
+    <button onclick="toggleTheme()" class="ml-4 p-2 rounded-lg bg-slate-200 dark:bg-slate-700 hover:scale-105 transition">
+      🌙
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section id="about" class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h2 class="text-4xl sm:text-5xl font-bold mb-4">Hey, I’m <span class="text-indigo-500">Gaurav Kaushik</span></h2>
+    <p class="max-w-2xl text-slate-600 dark:text-slate-300 mb-8 text-lg leading-relaxed">
+      A creative Front-End Developer who loves designing human experiences with code.
+      I combine my visual media background with modern JavaScript frameworks to build meaningful, beautiful things.
+    </p>
+    <a href="./assets/Gaurav_Kaushik_Resume.pdf" download class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl transition transform hover:scale-105 shadow-md">
+      Download Resume
+    </a>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-16 px-6 text-center">
+    <h3 class="text-3xl font-semibold mb-10">Technologies I Use</h3>
+    <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">HTML5</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">CSS3</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">JavaScript</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">React</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">Tailwind CSS</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">GSAP</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">Figma</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">Framer</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">Mongo DB</span>
+      <span class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-full hover:bg-indigo-500/30 transition">Next.js</span>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 px-6 bg-slate-100 dark:bg-slate-900/40">
+    <h3 class="text-3xl font-semibold text-center mb-10">Featured Projects</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🧾 To-Do App</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Organize tasks with drag & drop + local storage.</p>
+        <a href="https://gaurav010.github.io/todo-list-localstorage/" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🌦️ Weather App</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Fetch live weather data with OpenWeather API.</p>
+        <a href="https://gaurav010.github.io/weather-app/" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🧶Handicrafts</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">responsive handicraft store page.</p>
+        <a href="https://gaurav010.github.io/tailwind-handicraft-website/" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+       <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🧮Compound interest calculator</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Compound interest calculator using javascript.</p>
+        <a href="./compound interest calculator /index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+    
+
+    <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">⏱️Stopwatch</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">stopwatch using javascript.</p>
+        <a href="./stopwatch/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">⚛️React counter</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">react counter using React js.</p>
+        <a href="https://react-counter-two-lime.vercel.app/" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">✌️Rock paper scissor game</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Rock paper scissor game using javascript.</p>
+        <a href="./rock paper sissors/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+       <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🕙Clock</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">clock using javascript.</p>
+        <a href="./watch/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+        <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🧮Claculator</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Claculator using javascript.</p>
+        <a href="./calculator bro code/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>      
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🤞Random password generator</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Random password generator using javascript.</p>
+        <a href="./random password/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🎲Dice roller game</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">dice roller game using javascript.</p>
+        <a href="./dice roll/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">📋Form validation</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">form validation javascript.</p>
+        <a href="./form validation js/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+      
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">🌡️Temprature conversion</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Temprature conversion using javascript.</p>
+        <a href="./temprature conversion/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+       <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 hover:-translate-y-1 transition transform hover:shadow-lg">
+        <h4 class="text-xl font-semibold mb-2">#️⃣Number guessing game</h4>
+        <p class="text-slate-600 dark:text-slate-300 mb-4">Number guessing game using javascript.</p>
+        <a href="./Number guessing game/index.html" target="_blank" class="text-indigo-500 font-medium hover:underline">View Project →</a>
+      </div>
+
+    </div>
+
+   
+    
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 text-center">
+    <h3 class="text-3xl font-semibold mb-6">Let’s Connect</h3>
+    <p class="text-slate-600 dark:text-slate-300 mb-6">Want to collaborate or say hi? 👇</p>
+    <a href="mailto:gauravskworkk@gmail.com" class="bg-indigo-500 hover:bg-indigo-600 px-6 py-3 rounded-xl shadow-md transition transform hover:scale-105">
+      Say Hello
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 border-t border-slate-300 dark:border-slate-700 text-slate-500 dark:text-slate-400 text-sm">
+    © 2025 Gaurav Kaushik — Crafted with ❤️ & Tailwind CSS
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+    class="fixed bottom-6 right-6 bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-3 rounded-full shadow-lg opacity-0 pointer-events-none transition-all duration-300">
+    ⬆️
+  </button>
+
+  <script>
+    // Back to top visibility
+    const topBtn = document.getElementById('topBtn')
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        topBtn.classList.remove('opacity-0', 'pointer-events-none')
+      } else {
+        topBtn.classList.add('opacity-0', 'pointer-events-none')
+      }
+    })
+  </script>
+</body>
+</html>
